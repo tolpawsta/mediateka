@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediateka", "mediateka\mediateka.csproj", "{BC12FD17-ADBA-4C31-ADAB-3BF5588DC252}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mediateka.core", "mediateka.core\mediateka.core.csproj", "{D46120DA-E0A5-4AB5-94CB-28F9C27DC6A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC12FD17-ADBA-4C31-ADAB-3BF5588DC252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC12FD17-ADBA-4C31-ADAB-3BF5588DC252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC12FD17-ADBA-4C31-ADAB-3BF5588DC252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC12FD17-ADBA-4C31-ADAB-3BF5588DC252}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46120DA-E0A5-4AB5-94CB-28F9C27DC6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46120DA-E0A5-4AB5-94CB-28F9C27DC6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46120DA-E0A5-4AB5-94CB-28F9C27DC6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46120DA-E0A5-4AB5-94CB-28F9C27DC6A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {019EA90C-0213-4DC4-AE82-68B7EF30AF8D}
+	EndGlobalSection
+EndGlobal
