@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mediateka.core.Entity.Player
+namespace mediateka.View
 {
-    interface IImageViewer:IPlayer
+   public  interface IView
     {
-        void Rotate(IElement element);
+      void Show(String message);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -6,35 +7,71 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mediateka.core.Entity
+namespace mediateka.Entity
 {
-    public class MediaList : IMediaList
+    public class MediaList:ICollection<BaseElement>
     {
-        public string Name { get; set; }
-        
-        public TimeSpan Duration { get; }
-        public ICollection<IElement> elements { get;set;}
-        public bool IsExecuting { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IElement currentElement {get;set;}
 
-        
-        public MediaList(ICollection<IElement> elements):this(name:"Default",elements:elements)
-        {
-           
-        }
+        ICollection<BaseElement> elements;
 
-        public MediaList(String name,ICollection<IElement> elements)
+        public MediaList(ICollection<BaseElement> elements)
         {
-            Name = name;
             this.elements = elements;
         }
-        public void Execute()
+        public BaseElement currentElement {get;set;}
+
+        public ICollection<BaseElement> GetElements()
         {
-            foreach (IElement element in elements)
+            return elements;
+        }
+        public int Count => throw new NotImplementedException();
+
+        public bool IsReadOnly => throw new NotImplementedException();
+
+        public void Add(BaseElement item)
+        {
+            elements.Add(item);
+            
+        }
+
+        public void Clear()
+        {
+            elements.Clear();
+        }
+
+        public bool Contains(BaseElement item)
+        {
+           return elements.Contains(item);
+        }
+
+        public void CopyTo(BaseElement[] array, int arrayIndex)
+        {
+            elements.CopyTo(array, arrayIndex);
+        }
+
+        public IEnumerator<BaseElement> GetEnumerator()
+        {
+           return elements.GetEnumerator();
+        }
+
+        public bool Remove(BaseElement item)
+        {
+           return elements.Remove(item);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return (IEnumerator) elements;
+        }
+        public void Sort(ElementCompareType compareType)
+        {
+            switch (compareType)
             {
-               currentElement=element;
-                currentElement.Execute();
+                case ElementCompareType.Name: elements = elements.OrderBy(x => x.Name).ToList(); break;
+                default: throw new ArgumentException("unexpected compare type"); 
             }
+            
+           // elements.OrderBy((x)=>x.Name==compareType.ToString(), new BaseElementComparer(compareType));
         }
     }
 }

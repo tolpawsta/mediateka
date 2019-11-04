@@ -4,19 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mediateka.core.Entity
+namespace mediateka.Entity
 {
-    public class ImageElement : IElement
+    public class ImageElement : BaseElement
     {
-        public string Name { get; set; }
 
-        public TimeSpan Duration { get; }
-        //? Need it?
-        public bool IsExecuting { get; set; } = false;
-
-        public void Execute()
+        public ImageElement(string name)
         {
-           //Do some work
+            Name = name;
+        }
+        public override string getStream()
+        {
+            return "Opened image - "+Name;
         }
     }
 }

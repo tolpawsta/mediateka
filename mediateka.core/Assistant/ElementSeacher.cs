@@ -1,4 +1,4 @@
-﻿using mediateka.core.Entity;
+﻿using mediateka.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

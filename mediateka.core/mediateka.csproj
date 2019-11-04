@@ -43,23 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assistant\ElementCompareType.cs" />
     <Compile Include="Assistant\ElementSeacher.cs" />
     <Compile Include="Entity\Elenemt\AudioElement.cs" />
-    <Compile Include="Entity\Elenemt\IElement.cs" />
+    <Compile Include="Entity\Elenemt\BaseElement.cs" />
     <Compile Include="Entity\Elenemt\ImageElement.cs" />
-    <Compile Include="Entity\Elenemt\IMediaList.cs" />
     <Compile Include="Entity\Elenemt\VideoElement.cs" />
     <Compile Include="Entity\Elenemt\MediaList.cs" />
     <Compile Include="Entity\Player\AudioPlayer.cs" />
-    <Compile Include="Entity\Player\IMediaPlayer.cs" />
-    <Compile Include="Entity\Player\IImageViewer.cs" />
     <Compile Include="Entity\Player\ImageViewer.cs" />
-    <Compile Include="Entity\Player\IPlayer.cs" />
+    <Compile Include="Entity\Player\Player.cs" />
     <Compile Include="Entity\Player\VideoPlayer.cs" />
+    <Compile Include="Mediateka.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ConsoleView.cs" />
+    <Compile Include="View\IView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

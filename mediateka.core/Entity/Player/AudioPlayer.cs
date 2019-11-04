@@ -1,34 +1,22 @@
-﻿using System;
+﻿using mediateka.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mediateka.core.Entity.Player
+namespace mediateka.Entity.Player
 {
-    class AudioPlayer : IMediaPlayer
+    class AudioPlayer : Player
     {
-        public ICollection<IElement> PlayList { get; set; } = null;
-
-        public void Pause()
+        
+        public AudioPlayer(IView view)
         {
-            
+            this.view = view;
         }
-
-        public void Play(IElement element)
+        public override void Play(BaseElement element)
         {
-            element.Execute();
-        }
-
-        public void Remove(IElement element)
-        {
-            //TODO: organize removing element from Playlist
-            PlayList.Remove(element);
-        }
-
-        public void Stop()
-        {
-            
+           view.Show(element.getStream());
         }
     }
 }

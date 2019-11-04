@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace mediateka
+namespace mediateka.View
 {
-    class Program
+    class ConsoleView : IView
     {
-        static void Main(string[] args)
+        public void Show(string message)
         {
+            Console.WriteLine(message);
         }
     }
 }

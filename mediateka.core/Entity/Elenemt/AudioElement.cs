@@ -4,21 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mediateka.core.Entity
+namespace mediateka.Entity
 {
-    class AudioElement : IElement
+    class AudioElement : BaseElement
     {
-        public string Name { get ; set; }
-
-        public TimeSpan Duration { get; }
-        public bool IsExecuting { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public void Execute()
+        public AudioElement(string name)
         {
-            if (!IsExecuting)
-            {
-                //Do some work
-            }
+            Name = name;
+        }
+        public override string getStream()
+        {
+            return "Playing audiofile - "+ Name;
 
         }
     }
